@@ -1,0 +1,45 @@
+Ejercicios de MySQL:
+1. Creación de tablas:
+○ Escribe una consulta SQL para crear una tabla llamada "Usuarios" con las
+columnas "id" (entero, clave primaria, autoincremental), "nombre" (varchar),
+"correo" (varchar) y "edad" (entero).
+
+CREATE TABLE Usuarios(
+Id INT,
+Nombre VARCHAR(100),
+Correo VARCHAR(100),
+Edad INT
+);
+
+
+2. Inserción de datos:
+○ Escribe una consulta SQL para insertar 5 registros en la tabla "Usuarios" creada en
+el ejercicio anterior.
+
+INSERT INTO Estudiantes VALUES (1,"juan",juandelo@gmail.com,17);
+INSERT INTO Estudiantes VALUES (2,"Mario",marioluz@gmail.com,20);
+INSERT INTO Estudiantes VALUES (3,"Carl",carlt@gmail.com,28);
+INSERT INTO Estudiantes VALUES (3,"javi",jivmyf@gmail.com,18);
+INSERT INTO Estudiantes VALUES (3,"karla",karlita@gmail.com,33);
+
+
+3. Selección de datos:
+○ Escribe una consulta SQL para seleccionar todos los registros de la tabla
+"Usuarios" donde la edad sea mayor a 25.
+
+SELECT * FROM Estudiantes WHERE edad >= 25;
+
+4. Actualización de datos:
+○ Escribe una consulta SQL para actualizar el correo electrónico de un usuario
+específico en la tabla "Usuarios".
+
+UPDATE Estudiantes SET Correo = "juandelatg@gmail.com" WHERE nombre = "Juan";
+
+
+5. Eliminación de datos:
+○ Escribe una consulta SQL para eliminar todos los usuarios de la tabla "Usuarios"
+que tengan menos de 18 años.
+
+DELETE FROM Usuarios WHERE Edad = "18";
+
+Espero que estos ejercicios sean útiles para tus estudiantes. no fueron utiles:(
