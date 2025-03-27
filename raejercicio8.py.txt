@@ -1,0 +1,7 @@
+numeros = [10, 20, 30, 40, 50]
+numero_usuario = int(input("Ingrese un número: "))
+
+if numero_usuario in numeros:
+    print(f"El número {numero_usuario} está en la lista.")
+else:
+    print(f"El número {numero_usuario} no está en la lista.")

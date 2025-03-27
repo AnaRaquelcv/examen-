@@ -1,0 +1,4 @@
+estudiantes_clase=["jose villalobos", "juan hidalgo", "genesis paz", "raquel carruyo", "paula carruyo"]
+
+for estudiantes in estudiantes_clase:
+    print(estudiantes)

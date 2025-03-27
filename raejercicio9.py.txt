@@ -1,0 +1,8 @@
+frutas = {}
+
+for i in range(3):
+    fruta = input(f"Ingrese el nombre de la fruta {i + 1}: ")
+    precio = input(f"Ingrese el precio de {fruta}: ")
+    frutas[fruta] = precio
+
+print(frutas)

@@ -1,0 +1,8 @@
+colores = ("rosado", "blanco", "azul")
+
+numero = int(input("Ingresa un número (0, 1 o 2): "))
+
+if 0 <= numero <= 2:
+    print(f"El color seleccionado es: {colores[numero]}")
+else:
+    print("Número inválido. Por favor, ingresa 0, 1 o 2.")

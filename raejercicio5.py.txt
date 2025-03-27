@@ -1,0 +1,8 @@
+personas = {}
+
+for i in range(3):
+    nombre = input(f"Ingrese el nombre de la persona {i + 1}: ")
+    edad = input(f"Ingrese la edad de {nombre}: ")
+    personas[nombre] = edad
+
+print(personas)
