@@ -1,0 +1,33 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recoger la frase ingresada por el usuario
+    $frase = $_POST['frase'];
+
+
+    $longitud = strlen($frase);
+
+ 
+    $mayusculas = strtoupper($frase);
+    $minusculas = strtolower($frase);
+
+    echo "La longitud de la frase es: $longitud caracteres.<br>";
+    echo "Frase en mayúsculas: $mayusculas<br>";
+    echo "Frase en minúsculas: $minusculas<br>";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones de Cadenas en PHP</title>
+</head>
+<body>
+    <form method="post" action="">
+        <label for="frase">Ingrese una frase:</label><br>
+        <input type="text" name="frase" required><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

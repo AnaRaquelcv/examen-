@@ -1,0 +1,13 @@
+<?php
+$personas = array(
+    "Juan" => 25,
+    "María" => 30,
+    "Pedro" => 22,
+    "Ana" => 28,
+    "Luis" => 35
+);
+
+foreach ($personas as $nombre => $edad) {
+    echo "Nombre: $nombre, Edad: $edad años\n";
+}
+?>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mayor o menor</title>
+</head>
+<body>
+
+<form method="post" action="">
+    Número 1: <input type="number" name="num1" required><br>
+    Número 2: <input type="number" name="num2" required><br>
+    Número 3: <input type="number" name="num3" required><br>
+    <input type="submit" value="mostrar">
+</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Productos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<?php
+
+$productos = array(
+    array("nombre" => "Laptop", "precio" => 1200, "cantidad" => 50),
+    array("nombre" => "Mouse", "precio" => 25, "cantidad" => 200),
+    array("nombre" => "Teclado", "precio" => 75, "cantidad" => 100),
+    array("nombre" => "Monitor", "precio" => 300, "cantidad" => 75),
+    array("nombre" => "Impresora", "precio" => 150, "cantidad" => 60)
+);
+
+// Imprimir la tabla HTML
+echo "<table>";
+echo "<thead><tr><th>Nombre</th><th>Precio</th><th>Cantidad</th></tr></thead>";
+echo "<tbody>";
+
+foreach ($productos as $producto) {
+    echo "<tr>";
+    echo "<td>" . htmlspecialchars($producto["nombre"]) . "</td>";
+    echo "<td>" . htmlspecialchars($producto["precio"]) . "</td>";
+    echo "<td>" . htmlspecialchars($producto["cantidad"]) . "</td>";
+    echo "</tr>";
+}
+
+echo "</tbody>";
+echo "</table>";
+
+?>
+
+</body>
+</html>

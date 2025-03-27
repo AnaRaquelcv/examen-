@@ -1,0 +1,13 @@
+<?php
+function calcularAreaCirculo($radio) {
+    $area = pi() * pow($radio, 2);
+    return $area;
+}
+
+$radios = [1, 2, 3, 4, 5]; 
+
+foreach ($radios as $radio) {
+    $area = calcularAreaCirculo($radio);
+    echo "El área del círculo con radio $radio es: " . round($area, 2) . " unidades cuadradas.\n";
+}
+?>

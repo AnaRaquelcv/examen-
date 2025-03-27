@@ -1,0 +1,13 @@
+<?php
+echo "Números del 1 al 10:\n";
+for ($i = 1; $i <= 10; $i++) {
+    echo $i . "\n";
+}
+
+echo "\nNúmeros del 20 al 10 en orden descendente:\n";
+$num = 20;
+while ($num >= 10) {
+    echo $num . "\n";
+    $num--;
+}
+?>

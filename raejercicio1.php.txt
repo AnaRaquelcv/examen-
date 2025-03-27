@@ -1,0 +1,18 @@
+<?php
+$entero = 42;                  
+$flotante = 3.14;              
+$cadena = "Hola, mundo!";      
+$booleano = true;              
+
+echo "Variable de tipo entero:\n";
+var_dump($entero);
+
+echo "\nVariable de tipo flotante:\n";
+var_dump($flotante);
+
+echo "\nVariable de tipo cadena:\n";
+var_dump($cadena);
+
+echo "\nVariable de tipo booleano:\n";
+var_dump($booleano);
+?>

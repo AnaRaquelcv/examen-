@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora simple</title>
+</head>
+<body>
+
+<form method="post" action="">
+    ingrese una operacion matematica como suma, resta, multiplicacion o division: <input type="text" name="operacion" required><br>
+    ingrese el primer numero: <input type="number" name="num1" required><br>
+    ingrese el segundo numero: <input type="number" name="num2" required><br>
+
+    <input type="submit" value="mostrar">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recogemos los valores del formulario
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $operacion = $_POST['operacion'];
+
+    // Inicializamos la variable para el resultado
+    $resultado = 0;
+
+    switch ($operacion) {
+        case "suma":
+            $resultado = $num1 + $num2;
+            echo "<p>El resultado de la suma es: $resultado</p>";
+            break;
+        case "resta":
+            $resultado = $num1 - $num2;
+            echo "<p>El resultado de la resta es: $resultado</p>";
+            break;
+        case "multiplicacion":
+            $resultado = $num1 * $num2;
+            echo "<p>El resultado de la multiplicacion es: $resultado</p>";
+            break;
+        case "division":
+            if ($num2 != 0) {
+                $resultado = $num1 / $num2;
+                echo "<p>El resultado de la division es: $resultado</p>";
+            } else {
+                echo "<p>Error: No se puede dividir entre cero.</p>";
+            }
+            break;
+        default:
+            echo "<p>La opcion ingresada no es valida</p>";
+            break;
+    }
+
+    if ($operacion == "suma") {
+        if ($resultado > 100) {
+            echo "<p>La suma es mayor que 100.</p>";
+        } elseif ($resultado < 100) {
+            echo "<p>La suma es menor que 100.</p>";
+        } else {
+            echo "<p>La suma es igual a 100.</p>";
+        }
+    }
+}
+?>
+
+</body>
+</html>
